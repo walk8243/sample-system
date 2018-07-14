@@ -1,0 +1,19 @@
+{
+  "name": "sample-system",
+  "version": "1.0.0",
+  "description": "フロントとバックを一つのレポジトリ内に入れる",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/walk8243/sample-system.git"
+  },
+  "author": "walk8243",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/walk8243/sample-system/issues"
+  },
+  "homepage": "https://github.com/walk8243/sample-system#readme"
+}
