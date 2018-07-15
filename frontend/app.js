@@ -14,8 +14,11 @@ app.set('view engine', 'ejs');
 
 app
   .all('/', (req, res) => {
-    console.log(req.originalUrl);
-    res.send("aaa");
+    if(func.isExistFile(`${app.get('views')}/index.ejs`)) {
+      res.render('index');
+    } else {
+      error.errorHandler(res, 503);
+    }
   })
   .all('/error', (req, res) => {
     res.end(hoge);
