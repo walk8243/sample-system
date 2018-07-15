@@ -7,7 +7,7 @@ var app = express();
 app.locals = {
   title : 'My App',
   port  : 1234
-}
+};
 
 app
   .all('/', (req, res) => {
@@ -20,11 +20,9 @@ app
 
 app
   .use((req, res, next) => {
-    // res.sendStatus(404);
     error.errorHandler(res, 404);
   })
   .use((err, req, res, next) => {
-    // res.sendStatus(500);
     error.errorHandler(res, 500);
   });
 
