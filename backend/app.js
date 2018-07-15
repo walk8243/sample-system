@@ -13,10 +13,15 @@ app
     res.send("aaa");
   })
   .all('/error', (req, res) => {
-    console.log(req.originalUrl);
-    // console.log(req.query.status);
-    res.sendStatus(req.query.status);
-    // res.end("sss");
+    res.end(hoge);
+  });
+
+app
+  .use((req, res, next) => {
+    res.sendStatus(404);
+  })
+  .use((err, req, res, next) => {
+    res.sendStatus(500);
   });
 
 app.listen(app.locals.port, () => {
