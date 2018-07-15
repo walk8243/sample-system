@@ -1,9 +1,7 @@
-<html>
-  <head>
-    <title>500 - <%= app.title %></title>
-  </head>
+<%- include('../common/_head', {
+  title: '500 - ' + app.title
+}); _%>
 
-  <body>
-    <h1>500 Internal Server Error</h1>
-  </body>
-</html>
+<h1>500 Internal Server Error</h1>
+
+<%- include('../common/_foot', {}); _%>
