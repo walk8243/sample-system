@@ -2,6 +2,11 @@ const express = require('express');
 
 var app = express();
 
+app.locals = {
+  title : 'My App',
+  port  : 1234
+}
+
 app
   .all('/', (req, res) => {
     console.log(req.originalUrl);
@@ -14,4 +19,6 @@ app
     // res.end("sss");
   });
 
-app.listen(1234);
+app.listen(app.locals.port, () => {
+  console.log(`${app.locals.title} listening on port ${app.locals.port}!`);
+});
