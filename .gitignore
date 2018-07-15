@@ -61,4 +61,4 @@ typings/
 .next
 
 # link file
-.lnk
+*.lnk

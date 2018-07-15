@@ -4,8 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "app": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "walk8243",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
