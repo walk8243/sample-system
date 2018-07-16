@@ -14,11 +14,7 @@ app.set('view engine', 'ejs');
 
 app
   .all('/', (req, res) => {
-    if(func.isExistFile(`${app.get('views')}/index.ejs`)) {
-      res.render('index');
-    } else {
-      error.errorHandler(res, 503);
-    }
+    res.render('index');
   })
   .all('/error', (req, res) => {
     res.end(hoge);
@@ -29,6 +25,7 @@ app
     error.errorHandler(res, 404);
   })
   .use((err, req, res, next) => {
+    console.error(err.stack);
     error.errorHandler(res, 500);
   });
 
