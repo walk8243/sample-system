@@ -29,6 +29,7 @@ app
     error.errorHandler(res, 404);
   })
   .use((err, req, res, next) => {
+    console.error(err.stack);
     error.errorHandler(res, 500);
   });
 
