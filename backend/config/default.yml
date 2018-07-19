@@ -1,0 +1,3 @@
+server:
+  title : My App
+  port  : 80
