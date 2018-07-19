@@ -1,12 +1,13 @@
 // npm modules
-const express = require('express');
+const express = require('express'),
+      configFile  = require('config');
 // local modules
 const error   = require('./error');
 
 var app = express();
 app.locals = {
-  title : 'My App',
-  port  : 1234
+  title : configFile.server.title,
+  port  : configFile.server.port
 };
 
 app

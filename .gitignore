@@ -62,3 +62,7 @@ typings/
 
 # link file
 *.lnk
+
+# config file
+**/config/?*
+!**/config/default.*
